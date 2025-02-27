@@ -34,23 +34,25 @@ To make this portfolio your own, you only need to:
 The `content.ts` file is structured as follows:
 
 ```typescript
-{
-personal: {
-name: string;
-role: string;
-bio: string;
-// ...
-},
-projects: [
-{
-title: string;
-description: string;
-image: string;
-// ...
-}
-],
-// ...
-}
+PersonalInfo = {
+  name: string;
+  title: string;
+  email: string;
+  location: string;
+  about: string;
+  avatar: string;
+  quote: string;
+  message: string;
+  socials: {
+    github?: string;
+    linkedin?: string;
+    twitter?: string;
+    instagram?: string;
+  };
+  skills: string[];
+  experiences: Experience[];
+  projects: Project[];
+};
 ```
 
 ## Deployment
