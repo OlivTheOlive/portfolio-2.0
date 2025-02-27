@@ -23,6 +23,7 @@ export type PersonalInfo = {
   about: string;
   avatar: string;
   quote: string;
+  message: string;
   socials: {
     github?: string;
     linkedin?: string;
@@ -43,7 +44,8 @@ const personalInfo: PersonalInfo = {
   avatar: "/images/avatar.jpg",
   about:
     "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I'm currently pursuing ISC²'s Cybersecurity certification while building various projects. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
-
+  message:
+    "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
   socials: {
     github: "https://github.com/OlivTheOlive", // if no github leave blank
     linkedin: "https://www.linkedin.com/in/olivié-bergeron/", // if no linkedin leave blank

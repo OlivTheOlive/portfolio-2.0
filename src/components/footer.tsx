@@ -36,8 +36,7 @@ const Footer = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-            Feel free to reach out if you're looking for a developer, have a
-            question, or just want to connect.
+            {personalInfo.message}
           </p>
           <Button asChild size="lg" className="mt-2">
             <a
