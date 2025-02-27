@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import personalInfo from "@/lib/content";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, FolderGit2 } from "lucide-react";
 
 const Projects = () => {
   const fadeIn = {
@@ -29,7 +29,7 @@ const Projects = () => {
         Projects
       </motion.h2>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {personalInfo.projects.map((project, index) => (
           <motion.div
             key={project.title}
@@ -37,54 +37,74 @@ const Projects = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.15 }}
           >
-            <Card className="group flex h-full flex-col overflow-hidden shadow-sm transition-all hover:shadow-md">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+            <Card className="group relative flex h-full flex-col overflow-hidden border-none bg-secondary/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+              <div className="relative h-52 overflow-hidden bg-secondary/10">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center">
+                    <FolderGit2 className="h-16 w-16 text-primary/40" />
+                  </div>
+                )}
               </div>
-              <CardContent className="flex flex-col gap-3 p-6">
-                <h3 className="text-xl font-semibold tracking-tight">{project.title}</h3>
-                <p className="text-sm text-foreground/80">{project.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
+              <CardContent className="flex flex-1 flex-col gap-4 p-6">
+                <h3 className="text-xl font-bold tracking-tight text-foreground/90">
+                  {project.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-foreground/70">
+                  {project.description}
+                </p>
+                <div className="mt-auto flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                      className="rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm transition-colors hover:bg-primary/20"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="border-t bg-secondary/10 p-6">
-                <div className="flex justify-between">
-                  <Button asChild variant="ghost" size="sm">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
+              <CardFooter className="border-t border-border/50 bg-secondary/5 p-4">
+                <div className="flex w-full justify-end gap-2">
                   {project.github && (
-                    <Button asChild variant="ghost" size="sm">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="hover:bg-secondary/20"
+                    >
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1"
+                        className="flex items-center gap-2"
                       >
                         <Github className="h-4 w-4" />
                         Code
+                      </a>
+                    </Button>
+                  )}
+                  {project.link && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="hover:bg-secondary/20"
+                    >
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Demo
                       </a>
                     </Button>
                   )}

@@ -11,31 +11,40 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background antialiased">
       <Header />
-      
-      <section className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 pt-20 pb-16 sm:px-6 md:pt-24">
+
+      <section className="relative flex min-h-[98vh] flex-col items-center justify-center px-4 pt-20 pb-16 sm:px-6 md:pt-24">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
             {personalInfo.name}
           </h1>
-          <p className="mt-6 text-xl font-medium text-muted-foreground sm:text-2xl md:text-3xl">
+          {/* <p className="mt-6 text-xl font-medium text-muted-foreground sm:text-2xl md:text-3xl">
             {personalInfo.title}
-          </p>
+          </p> */}
           <p className="mx-auto mt-6 max-w-2xl text-base text-foreground/80 md:text-lg">
-            {personalInfo.about.split('.')[0]}.
+            {personalInfo.about.split(".")[0]}.
           </p>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="px-8 py-6 text-base font-medium">
+            <Button
+              asChild
+              size="lg"
+              className="px-8 py-6 text-base font-medium"
+            >
               <a href="#projects">View My Work</a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="px-8 py-6 text-base font-medium">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="px-8 py-6 text-base font-medium"
+            >
               <a href="#contact">Contact Me</a>
             </Button>
           </div>
         </div>
-        
+
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <a 
-            href="#about" 
+          <a
+            href="#about"
             className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-primary/10 hover:text-foreground"
             aria-label="Scroll to About section"
           >
@@ -48,19 +57,19 @@ export default function Home() {
         <section id="about" className="py-16">
           <About />
         </section>
-        
+
         <div className="mx-auto max-w-5xl">
           <div className="h-px bg-border/40"></div>
         </div>
-        
+
         <section id="experience" className="py-16">
           <Experience />
         </section>
-        
+
         <div className="mx-auto max-w-5xl">
           <div className="h-px bg-border/40"></div>
         </div>
-        
+
         <section id="projects" className="py-16">
           <Projects />
         </section>

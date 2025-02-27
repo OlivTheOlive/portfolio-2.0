@@ -79,7 +79,7 @@ const Header = () => {
           >
             <Button asChild>
               <a
-                href="/resume.pdf"
+                href="/Olivie_Bergeron_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium"
@@ -127,7 +127,7 @@ const Header = () => {
             ))}
             <Button asChild className="w-full">
               <a
-                href="/resume.pdf"
+                href="/Olivie_Bergeron_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium"
@@ -143,4 +143,3 @@ const Header = () => {
 };
 
 export default Header;
-

@@ -1,11 +1,17 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import personalInfo from "@/lib/content";
-import { Github, Linkedin, Twitter, Instagram, MapPin, Quote } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  MapPin,
+  Quote,
+} from "lucide-react";
 
 const About = () => {
   const fadeIn = {
@@ -57,11 +63,13 @@ const About = () => {
                   </AvatarFallback>
                 </Avatar>
 
-                <h3 className="mt-6 text-2xl font-bold tracking-tight">{personalInfo.name}</h3>
+                <h3 className="mt-6 text-2xl font-bold tracking-tight">
+                  {personalInfo.name}
+                </h3>
                 <p className="mt-1 font-medium text-primary">
                   {personalInfo.title}
                 </p>
-                
+
                 <div className="mt-3 flex items-center justify-center text-muted-foreground">
                   <MapPin className="mr-1.5 h-4 w-4" />
                   <span className="text-sm">{personalInfo.location}</span>
@@ -100,7 +108,9 @@ const About = () => {
         >
           <Card className="shadow-sm transition-all hover:shadow-md">
             <CardContent className="p-6 pt-6">
-              <h3 className="text-xl font-semibold tracking-tight">Biography</h3>
+              <h3 className="text-xl font-semibold tracking-tight">
+                Biography
+              </h3>
               <p className="mt-4 text-foreground/80 leading-relaxed">
                 {personalInfo.about}
               </p>
@@ -108,7 +118,9 @@ const About = () => {
               <Separator className="my-6" />
 
               <div>
-                <h3 className="text-xl font-semibold tracking-tight">Skills & Expertise</h3>
+                <h3 className="text-xl font-semibold tracking-tight">
+                  Skills & Expertise
+                </h3>
                 <div className="mt-4 flex flex-wrap gap-2.5">
                   {personalInfo.skills.map((skill) => (
                     <span
@@ -135,8 +147,7 @@ const About = () => {
                 <div className="flex items-start">
                   <Quote className="mr-3 h-5 w-5 flex-shrink-0 text-primary/60" />
                   <p className="text-foreground/80 italic">
-                    I'm passionate about creating elegant solutions to complex problems and 
-                    continuously learning new technologies to improve my craft.
+                    {personalInfo.quote}
                   </p>
                 </div>
               </CardContent>
