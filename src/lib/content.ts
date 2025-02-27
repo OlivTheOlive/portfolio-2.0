@@ -134,7 +134,7 @@ const personalInfo: PersonalInfo = {
       ],
       image: "/images/template.png", // if no image leave blank
       link: "", // if no link leave blank
-      github: "https://github.com/OlivTheOlive/my_portfolio", // if no github leave blank
+      github: "https://github.com/OlivTheOlive/portfolio-2.0", // if no github leave blank
     },
     {
       title: "Track Your Sub",
