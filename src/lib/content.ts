@@ -121,7 +121,7 @@ const personalInfo: PersonalInfo = {
     {
       title: "Portfolio Template",
       description:
-        "A dashboard for tracking personal finances, expenses, and investments with data visualization.",
+        "A Portfolio template built with TypeScript, Tailwind CSS, React.js, Next.js, Lucide React, Next Theme, Shadcn UI, and Framer Motion. Easy to customize and deploy.",
       tags: [
         "TypeScript",
         "Tailwind CSS",
