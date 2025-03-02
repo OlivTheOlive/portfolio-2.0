@@ -79,6 +79,42 @@ const personalInfo: PersonalInfo = {
   ],
   projects: [
     {
+      title: "Track Your Sub",
+      description:
+        "A simple calculator to help track protein, carbs, and fats from my favorite Canadian sandwiches. Available in English and French!",
+      tags: [
+        "TypeScript",
+        "Tailwind CSS",
+        "React.js",
+        "Next.js",
+        "Lucide React",
+        "Next Theme",
+        "Shadcn UI",
+        "Framer Motion",
+      ],
+      image: "/images/sub.png", // if no image leave blank
+      link: "https://buildyoursandwich.vercel.app/", // if no link leave blank
+    },
+    {
+      title: "Portfolio Template",
+      description:
+        "A Portfolio template built with TypeScript, Tailwind CSS, React.js, Next.js, Lucide React, Next Theme, Shadcn UI, and Framer Motion. Easy to customize and deploy.",
+      tags: [
+        "TypeScript",
+        "Tailwind CSS",
+        "React.js",
+        "Next.js",
+        "Lucide React",
+        "Next Theme",
+        "Shadcn UI",
+        "Framer Motion",
+      ],
+      image: "/images/template.png", // if no image leave blank
+      link: "", // if no link leave blank
+      github: "https://github.com/OlivTheOlive/portfolio-2.0", // if no github leave blank
+    },
+
+    {
       title: "Zoho Customer Portal Prototype",
       description:
         "As team lead, I developed a Node.js backend application that integrates with ZOHO API to synchronize project data with MongoDB and serve it through API routes to a React.js frontend prototype, providing a more flexible alternative to Zoho Creator for the client.",
@@ -117,41 +153,6 @@ const personalInfo: PersonalInfo = {
       image: "", // if no image leave blank
       link: "", // if no link leave blank
       github: "https://github.com/OlivTheOlive/RoadRunnerV2", // if no github leave blank
-    },
-    {
-      title: "Portfolio Template",
-      description:
-        "A Portfolio template built with TypeScript, Tailwind CSS, React.js, Next.js, Lucide React, Next Theme, Shadcn UI, and Framer Motion. Easy to customize and deploy.",
-      tags: [
-        "TypeScript",
-        "Tailwind CSS",
-        "React.js",
-        "Next.js",
-        "Lucide React",
-        "Next Theme",
-        "Shadcn UI",
-        "Framer Motion",
-      ],
-      image: "/images/template.png", // if no image leave blank
-      link: "", // if no link leave blank
-      github: "https://github.com/OlivTheOlive/portfolio-2.0", // if no github leave blank
-    },
-    {
-      title: "Track Your Sub",
-      description:
-        "A simple calculator to help track protein, carbs, and fats from my favorite Canadian sandwiches. Available in English and French!",
-      tags: [
-        "TypeScript",
-        "Tailwind CSS",
-        "React.js",
-        "Next.js",
-        "Lucide React",
-        "Next Theme",
-        "Shadcn UI",
-        "Framer Motion",
-      ],
-      image: "/images/sub.png", // if no image leave blank
-      link: "https://buildyoursandwich.vercel.app/", // if no link leave blank
     },
   ],
 };
