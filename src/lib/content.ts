@@ -115,7 +115,7 @@ const personalInfo: PersonalInfo = {
     },
 
     {
-      title: "Zoho Customer Portal Prototype",
+      title: "Zoho Customer Portal Prototype (School Project)",
       description:
         "As team lead, I developed a Node.js backend application that integrates with ZOHO API to synchronize project data with MongoDB and serve it through API routes to a React.js frontend prototype, providing a more flexible alternative to Zoho Creator for the client.",
       tags: [
@@ -132,7 +132,7 @@ const personalInfo: PersonalInfo = {
       github: "https://github.com/OlivTheOlive/clientZohoNodeApi", // if no github leave blank
     },
     {
-      title: "RoadRunner",
+      title: "RoadRunner (School Project)",
       description:
         "A mobile application built with React Native and Expo that provides real-time route tracking and navigation using various mapping APIs (Google Directions, Mapbox) with a MongoDB/Express.js backend for data management.",
       tags: [
