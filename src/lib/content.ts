@@ -79,6 +79,26 @@ const personalInfo: PersonalInfo = {
   ],
   projects: [
     {
+      title: "Maple Politics",
+      description:
+        "A news hub for Canadian politics, featuring a real-time dashboard of the latest news and data from the federal election.",
+      tags: [
+        "TypeScript",
+        "Tailwind CSS",
+        "React.js",
+        "Next.js",
+        "Lucide React",
+        "Next Theme",
+        "Shadcn UI",
+        "Vercel",
+        "Recharts",
+        "Drizzle ORM",
+        "Zod",
+      ],
+      image: "/images/maple.png", // if no image leave blank
+      link: "https://maplepolitics.com/", // if no link leave blank
+    },
+    {
       title: "Track Your Sub",
       description:
         "A simple calculator to help track protein, carbs, and fats from my favorite Canadian sandwiches. Available in English and French!",
