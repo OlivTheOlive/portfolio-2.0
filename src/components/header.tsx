@@ -127,7 +127,7 @@ const Header = () => {
             ))}
             <Button asChild className="w-full">
               <a
-                href="/Olivie_Bergeron_Resume.pdf"
+                href="/Olivie_Bergeron_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium"
