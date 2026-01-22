@@ -239,7 +239,7 @@ const personalInfo: PersonalInfo = {
       github: "https://github.com/OlivTheOlive/RoadRunnerV2", // if no github leave blank
     },
     {
-      title: "Remote Data and RT ApplicationSchool Project)",
+      title: "Remote Data and RT Application Final Project (School Project)",
       description:
         "This project is simulates a mainly cloud-native stack that incorporate IoT Hub, Stream Analytics, Blob Storage, CosmoDB and App Services. The goal is to process telemetry data of IoT devices uses to track weather Rideau Canal safety metrics and display them to a web page.",
       tags: [
@@ -250,7 +250,7 @@ const personalInfo: PersonalInfo = {
         "Azure IoT Hub",
         "Azure Stream Analytics",
         "Azure Blob Storage",
-        "Azure Cosmos DB",
+        "Azure CosmosDB",
         "Azure App Services",
       ],
       image: "/images/remoteFinal.png", // if no image leave blank
