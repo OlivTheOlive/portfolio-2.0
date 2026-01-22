@@ -135,6 +135,9 @@ const personalInfo: PersonalInfo = {
         "Cloud application development",
         "Remote and Real-time data applications",
         "Professional development and career readiness",
+        "Web Content Accessibility Guidelines (WCAG) 2.2",
+        "Accessibility Testing and Evaluation",
+      
       ],
     },
   ],
