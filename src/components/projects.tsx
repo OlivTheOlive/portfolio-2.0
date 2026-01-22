@@ -175,7 +175,7 @@ const Projects = () => {
                     {project.description}
                   </p>
                   <div className="mt-auto flex flex-wrap gap-2">
-                    {project.tags.slice(0, 3).map((tag) => (
+                    {project.tags.map((tag) => (
                       <span
                         key={tag}
                         className="rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm transition-colors hover:bg-primary/20"
@@ -183,11 +183,11 @@ const Projects = () => {
                         {tag}
                       </span>
                     ))}
-                    {project.tags.length > 3 && (
+                    {/* {project.tags.length > 3 && (
                       <span className="rounded-full bg-secondary/20 px-3 py-1 text-xs font-medium text-foreground/70">
                         +{project.tags.length - 3} more
                       </span>
-                    )}
+                    )} */}
                   </div>
                 </CardContent>
                 <CardFooter className="border-t border-border/50 bg-secondary/5 p-4">
