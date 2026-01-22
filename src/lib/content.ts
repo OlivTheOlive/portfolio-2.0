@@ -6,6 +6,14 @@ export type Experience = {
   description: string[];
 };
 
+export type Education = {
+  title: string;
+  school: string;
+  location: string;
+  period: string;
+  highlights: string[];
+  coursework: string[];
+};
 export type Project = {
   title: string;
   description: string;
@@ -32,6 +40,7 @@ export type PersonalInfo = {
   };
   skills: string[];
   experiences: Experience[];
+  education: Education[];
   projects: Project[];
 };
 
@@ -74,13 +83,58 @@ const personalInfo: PersonalInfo = {
       title: "Junior Full Stack Developer",
       company: "Nortac Defence",
       location: "Ottawa, Canada",
-      period: "May 2024 - August 2024",
+      period: "August 2023 - April 2024",
       description: [
         "Led design and implementation of a customizable geofencing feature with multi-color support, delivering enhanced user personalization through React.js, Node.js, and Express.js",
         "Optimized platform architecture to support multiple live chat windows, increasing simultaneous chat capacity from 1 to 3 using JavaScript socket handling and React.js",
         "Developed Legal/About page UI components for Android NTAC app using React Native, ensuring open-source compliance and passing all QA assessments",
         "Development of Windows Tablet application using React.js, Electron.js, and Redux, implementing registration, login, and legal information systems",
         "Integrated new device registration features using React.js, Node.js, and MySQL, demonstrating rapid response to customer requirements",
+      ],
+    },
+  ],
+  education: [
+    {
+      title: "College Diploma in Computer Programming",
+      school: "Algonquin College",
+      location: "Ottawa, Canada",
+      period: "September 2022 - August 2024",
+      highlights: [
+        "Graduated with a GPA of 3.64",
+        "Completed a capstone project using Zoho API, React.js, Node.js, and MongoDB",
+        "Strong performance in core programming courses (A/A- grades in Java OOP, Web Programming, Network Programming)",
+        "Excelled in database and design courses (A+/A grades)",
+        "Completed two cooperative work terms (Fall 2023, Winter 2024)",
+        "Consistently earned A-range grades across most technical courses",
+      ],
+      coursework: ["Programming fundamentals and OOP with design patterns",
+        "Database systems and advanced database topics",
+        "Web and mobile application development",
+        "Operating systems and network programming",
+        "Business and enterprise application programming",
+        "Technical communication and professional development",
+      ],
+    },
+    {
+      title: "Post-Graduate College Certificate in Cloud Computing",
+      school: "Algonquin College",
+      location: "Ottawa, Canada",
+      period: "September 2025 - Present",
+      highlights: [
+      "Gpa of 3.80",
+      "Strong performance across all courses with consistent A-/A+ grades",
+      "Excelling in cloud-focused technical courses)",
+      "Currently enrolled (Fall 2025 term in progress)",
+      ],
+      coursework: [
+        "Cloud computing fundamentals and architecture",
+        "Cloud platform implementation and management",
+        "Cloud security and compliance",
+        "Cloud networking and virtualization",
+        "Cloud storage and data management",
+        "Cloud application development",
+        "Remote and Real-time data applications",
+        "Professional development and career readiness",
       ],
     },
   ],
@@ -180,6 +234,25 @@ const personalInfo: PersonalInfo = {
       image: "", // if no image leave blank
       link: "", // if no link leave blank
       github: "https://github.com/OlivTheOlive/RoadRunnerV2", // if no github leave blank
+    },
+    {
+      title: "Remote Data and RT ApplicationSchool Project)",
+      description:
+        "This project is simulates a mainly cloud-native stack that incorporate IoT Hub, Stream Analytics, Blob Storage, CosmoDB and App Services. The goal is to process telemetry data of IoT devices uses to track weather Rideau Canal safety metrics and display them to a web page.",
+      tags: [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "Azure IoT Hub",
+        "Azure Stream Analytics",
+        "Azure Blob Storage",
+        "Azure Cosmos DB",
+        "Azure App Services",
+      ],
+      image: "/images/remoteFinal.png", // if no image leave blank
+      link: "https://youtu.be/ENaMSjghwiM", // if no link leave blank
+      github: "https://github.com/OlivBerg/finalRemote", // if no github leave blank
     },
   ],
 };

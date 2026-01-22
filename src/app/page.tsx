@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import About from "@/components/about";
 import Experience from "@/components/experience";
+import Education from "@/components/education";
 import Projects from "@/components/projects";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -64,6 +65,14 @@ export default function Home() {
 
         <section id="experience" className="py-16">
           <Experience />
+        </section>
+
+        <div className="mx-auto max-w-5xl">
+          <div className="h-px bg-border/40"></div>
+        </div>
+
+        <section id="education" className="py-16">
+          <Education />
         </section>
 
         <div className="mx-auto max-w-5xl">
