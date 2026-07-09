@@ -13,44 +13,58 @@ export default function Home() {
     <main className="min-h-screen bg-background antialiased">
       <Header />
 
-      <section className="relative flex min-h-[98vh] flex-col items-center justify-center px-4 pt-20 pb-16 sm:px-6 md:pt-24">
+      <section className="relative flex min-h-[98vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 pb-16 sm:px-6 md:pt-24">
+        {/* decorative halftone corner accents */}
+        <div className="bg-halftone pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full" />
+        <div className="bg-halftone pointer-events-none absolute -left-20 bottom-10 h-72 w-72 rounded-full" />
+
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
+          <p className="eyebrow mb-6">
+            Portfolio &middot; Est. {new Date().getFullYear()}
+          </p>
+
+          <h1 className="font-serif text-5xl font-semibold tracking-tight text-foreground sm:text-6xl md:text-7xl">
             {personalInfo.name}
           </h1>
-          {/* <p className="mt-6 text-xl font-medium text-muted-foreground sm:text-2xl md:text-3xl">
-            {personalInfo.title}
-          </p> */}
-          <p className="mx-auto mt-6 max-w-2xl text-base text-foreground/80 md:text-lg">
-            {personalInfo.about.split(".")[0]}.
+
+          <div className="mx-auto mt-5 flex items-center justify-center gap-4">
+            <span className="rule-fade h-px w-12" />
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
+              {personalInfo.title}
+            </p>
+            <span className="rule-fade h-px w-12" />
+          </div>
+
+          <p className="mx-auto mt-8 max-w-2xl font-serif text-lg italic text-foreground/75 md:text-xl">
+            &ldquo;{personalInfo.about.split(".")[0]}.&rdquo;
           </p>
+
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button
-              asChild
-              size="lg"
-              className="px-8 py-6 text-base font-medium"
-            >
+            <Button asChild size="lg" className="px-8 py-6">
               <a href="#projects">View My Work</a>
             </Button>
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="px-8 py-6 text-base font-medium"
+              className="px-8 py-6"
             >
               <a href="#contact">Contact Me</a>
             </Button>
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
           <a
             href="#about"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-primary/10 hover:text-foreground"
+            className="flex h-10 w-10 animate-bounce items-center justify-center rounded-full border border-border/70 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
             aria-label="Scroll to About section"
           >
-            <ArrowDown className="h-5 w-5" />
+            <ArrowDown className="h-4 w-4" />
           </a>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            Scroll
+          </span>
         </div>
       </section>
 
@@ -60,7 +74,7 @@ export default function Home() {
         </section>
 
         <div className="mx-auto max-w-5xl">
-          <div className="h-px bg-border/40"></div>
+          <div className="rule-fade" />
         </div>
 
         <section id="experience" className="py-16">
@@ -68,7 +82,7 @@ export default function Home() {
         </section>
 
         <div className="mx-auto max-w-5xl">
-          <div className="h-px bg-border/40"></div>
+          <div className="rule-fade" />
         </div>
 
         <section id="education" className="py-16">
@@ -76,7 +90,7 @@ export default function Home() {
         </section>
 
         <div className="mx-auto max-w-5xl">
-          <div className="h-px bg-border/40"></div>
+          <div className="rule-fade" />
         </div>
 
         <section id="projects" className="py-16">

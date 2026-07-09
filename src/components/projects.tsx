@@ -30,24 +30,23 @@ const Projects = () => {
   const otherProjects = personalInfo.projects.slice(1);
 
   return (
-    <section className="relative py-20">
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -right-40 top-20 h-96 w-96 rounded-full bg-primary/5 blur-3xl"></div>
-        <div className="absolute -left-40 bottom-20 h-96 w-96 rounded-full bg-primary/5 blur-3xl"></div>
-      </div>
+    <section className="relative py-4">
+      <div className="bg-halftone pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full" />
+      <div className="bg-halftone pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full" />
 
       <div className="mx-auto max-w-5xl px-4">
         <motion.div
-          className="mb-16 flex items-center gap-3"
+          className="mb-16 flex items-baseline gap-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={slideIn}
         >
-          <h2 className="text-4xl font-bold tracking-tight text-foreground">
+          <span className="plate-index text-primary/60">04</span>
+          <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             Projects
           </h2>
-          <div className="h-[1px] flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
+          <span className="rule-fade h-px flex-1" />
         </motion.div>
 
         {featuredProject && (
@@ -58,19 +57,19 @@ const Projects = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
           >
-            <div className="group relative overflow-hidden rounded-xl bg-secondary/10 backdrop-blur-md shadow-lg transition-all duration-300 hover:shadow-xl">
-              <div className="absolute right-4 top-4 z-10 rounded-full bg-primary/90 p-2 text-background shadow-lg">
+            <div className="group relative overflow-hidden rounded-sm border-[1.5px] border-border bg-card transition-colors hover:border-primary/50">
+              <div className="absolute right-4 top-4 z-10 rounded-sm border border-primary bg-background/90 p-2 text-primary shadow-none">
                 <Star className="h-4 w-4" />
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative h-64 overflow-hidden bg-secondary/10 lg:h-full">
+                <div className="relative h-64 overflow-hidden bg-secondary/20 lg:h-full">
                   {featuredProject.image ? (
                     <Image
                       src={featuredProject.image}
                       alt={featuredProject.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover grayscale-[35%] contrast-110 sepia-[0.12] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center">
@@ -80,7 +79,8 @@ const Projects = () => {
                 </div>
 
                 <div className="flex flex-col p-8">
-                  <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground">
+                  <span className="eyebrow mb-2">Featured</span>
+                  <h3 className="mb-3 font-serif text-2xl font-semibold tracking-tight text-foreground">
                     {featuredProject.title}
                   </h3>
 
@@ -92,13 +92,13 @@ const Projects = () => {
                     {featuredProject.tags.slice(0, 5).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm transition-colors hover:bg-primary/20"
+                        className="rounded-sm border-[1.5px] border-primary/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-primary transition-colors hover:border-primary"
                       >
                         {tag}
                       </span>
                     ))}
                     {featuredProject.tags.length > 5 && (
-                      <span className="rounded-full bg-secondary/20 px-3 py-1 text-xs font-medium text-foreground/70">
+                      <span className="rounded-sm border-[1.5px] border-border px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-foreground/60">
                         +{featuredProject.tags.length - 5} more
                       </span>
                     )}
@@ -106,11 +106,7 @@ const Projects = () => {
 
                   <div className="mt-auto flex gap-3">
                     {featuredProject.github && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="border-primary/30 hover:border-primary hover:bg-primary/10"
-                      >
+                      <Button variant="outline" size="sm">
                         <a
                           href={featuredProject.github}
                           target="_blank"
@@ -152,14 +148,17 @@ const Projects = () => {
               variants={fadeIn}
               transition={{ delay: index * 0.15 }}
             >
-              <Card className="group relative flex h-full flex-col overflow-hidden border-none bg-secondary/10 backdrop-blur-md shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-xl">
-                <div className="relative h-52 overflow-hidden bg-secondary/10">
+              <Card className="group relative flex h-full flex-col overflow-hidden transition-colors hover:border-primary/50">
+                <div className="relative h-52 overflow-hidden bg-secondary/20">
+                  <span className="absolute left-3 top-3 z-10 plate-index rounded-sm border border-border bg-background/90 px-2 py-1 text-foreground/70">
+                    {String(index + 2).padStart(2, "0")}
+                  </span>
                   {project.image ? (
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover grayscale-[35%] contrast-110 sepia-[0.12] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center">
@@ -168,7 +167,7 @@ const Projects = () => {
                   )}
                 </div>
                 <CardContent className="flex flex-1 flex-col gap-4 p-6">
-                  <h3 className="text-xl font-bold tracking-tight text-foreground">
+                  <h3 className="font-serif text-xl font-semibold tracking-tight text-foreground">
                     {project.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-foreground/70">
@@ -178,26 +177,17 @@ const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm transition-colors hover:bg-primary/20"
+                        className="rounded-sm border-[1.5px] border-primary/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-primary transition-colors hover:border-primary"
                       >
                         {tag}
                       </span>
                     ))}
-                    {/* {project.tags.length > 3 && (
-                      <span className="rounded-full bg-secondary/20 px-3 py-1 text-xs font-medium text-foreground/70">
-                        +{project.tags.length - 3} more
-                      </span>
-                    )} */}
                   </div>
                 </CardContent>
-                <CardFooter className="border-t border-border/50 bg-secondary/5 p-4">
+                <CardFooter className="border-t-[1.5px] border-border/70 bg-secondary/10 p-4">
                   <div className="flex w-full justify-end gap-2">
                     {project.github && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="hover:bg-primary/10"
-                      >
+                      <Button variant="ghost" size="sm">
                         <a
                           href={project.github}
                           target="_blank"
@@ -210,11 +200,7 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.link && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="hover:bg-primary/10"
-                      >
+                      <Button variant="ghost" size="sm">
                         <a
                           href={project.link}
                           target="_blank"

@@ -32,15 +32,19 @@ const About = () => {
 
   return (
     <div className="mx-auto max-w-4xl">
-      <motion.h2
-        className="mb-8 text-3xl font-bold tracking-tight after:relative after:bottom-0 after:left-0 after:h-1 after:w-16 after:rounded-full after:bg-primary"
+      <motion.div
+        className="mb-10 flex items-baseline gap-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={fadeIn}
       >
-        About Me
-      </motion.h2>
+        <span className="plate-index text-primary/60">01</span>
+        <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+          About Me
+        </h2>
+        <span className="rule-fade h-px flex-1" />
+      </motion.div>
 
       <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
         <motion.div
@@ -50,23 +54,23 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeIn}
         >
-          <Card className="overflow-hidden shadow-sm transition-all hover:shadow-md">
+          <Card className="overflow-hidden transition-colors hover:border-primary/50">
             <CardContent className="p-6 pt-6">
               <div className="flex flex-col items-center text-center">
-                <Avatar className="h-32 w-32 border-4 border-primary/10">
+                <Avatar className="h-32 w-32 border-[3px] border-primary/20 grayscale">
                   <AvatarImage
                     src={personalInfo.avatar}
                     alt={personalInfo.name}
                   />
-                  <AvatarFallback className="text-4xl">
+                  <AvatarFallback className="font-serif text-4xl">
                     {personalInfo.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>
 
-                <h3 className="mt-6 text-2xl font-bold tracking-tight">
+                <h3 className="mt-6 font-serif text-2xl font-semibold tracking-tight">
                   {personalInfo.name}
                 </h3>
-                <p className="mt-1 font-medium text-primary">
+                <p className="mt-1 font-mono text-xs uppercase tracking-[0.15em] text-primary">
                   {personalInfo.title}
                 </p>
 
@@ -77,7 +81,7 @@ const About = () => {
 
                 <Separator className="my-6" />
 
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-3">
                   {Object.entries(personalInfo.socials).map(
                     ([platform, url]) =>
                       url && (
@@ -86,7 +90,7 @@ const About = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-full bg-secondary p-2.5 text-secondary-foreground transition-colors hover:bg-secondary/80"
+                          className="rounded-sm border-[1.5px] border-border p-2.5 text-foreground/70 transition-colors hover:border-primary hover:text-primary"
                           aria-label={platform}
                         >
                           {socialIcons[platform as keyof typeof socialIcons]}
@@ -106,26 +110,22 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeIn}
         >
-          <Card className="shadow-sm transition-all hover:shadow-md">
+          <Card className="transition-colors hover:border-primary/50">
             <CardContent className="p-6 pt-6">
-              <h3 className="text-xl font-semibold tracking-tight">
-                Biography
-              </h3>
-              <p className="mt-4 text-foreground/80 leading-relaxed">
+              <h3 className="eyebrow">Biography</h3>
+              <p className="mt-4 leading-relaxed text-foreground/80">
                 {personalInfo.about}
               </p>
 
               <Separator className="my-6" />
 
               <div>
-                <h3 className="text-xl font-semibold tracking-tight">
-                  Skills & Expertise
-                </h3>
-                <div className="mt-4 flex flex-wrap gap-2.5">
+                <h3 className="eyebrow">Skills &amp; Expertise</h3>
+                <div className="mt-4 flex flex-wrap gap-2">
                   {personalInfo.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
+                      className="rounded-sm border-[1.5px] border-primary/30 px-3 py-1 font-mono text-xs uppercase tracking-wide text-primary transition-colors hover:border-primary hover:bg-primary/5"
                     >
                       {skill}
                     </span>
@@ -142,14 +142,12 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="border-none bg-primary/5 shadow-sm">
-              <CardContent className="p-6">
-                <div className="flex items-start">
-                  <Quote className="mr-3 h-5 w-5 flex-shrink-0 text-primary/60" />
-                  <p className="text-foreground/80 italic">
-                    {personalInfo.quote}
-                  </p>
-                </div>
+            <Card className="border-primary/30 bg-primary/5">
+              <CardContent className="relative p-6">
+                <Quote className="absolute right-4 top-2 h-10 w-10 text-primary/10" />
+                <p className="relative font-serif text-lg italic leading-relaxed text-foreground/85">
+                  &ldquo;{personalInfo.quote}&rdquo;
+                </p>
               </CardContent>
             </Card>
           </motion.div>
