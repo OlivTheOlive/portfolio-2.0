@@ -54,7 +54,7 @@ const personalInfo: PersonalInfo = {
   about:
     "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and currently pursuing a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
   message:
-    "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
+    "Feel free to reach out if you're looking for a developer, have a question, or just want to connect (just dont be weird).",
   socials: {
     github: "https://github.com/OlivTheOlive", // if no github leave blank
     linkedin: "https://www.linkedin.com/in/olivié-bergeron/", // if no linkedin leave blank
@@ -80,7 +80,19 @@ const personalInfo: PersonalInfo = {
   ],
   experiences: [
     {
-      title: "Junior Full Stack Developer",
+      title: "TeamSite AI Cloud Developer (COOP)",
+      company: "DND",
+      location: "Ottawa, Canada",
+      period: " May 2026 - Present",
+      description: [
+        "Leveraged Azure Monitor Agent (AMA) and Data Collection Rules (DCRs) to build a scalable and efficient pipeline for aggregating application logs across multiple VMs.",
+        "Automated proactive system health checks by developing a PowerShell script to monitor and log the status of critical services and web applications.",
+        "Improved system observability and incident response time by creating a centralized logging solution that streams application data to an Azure Monitoring Workbook dashboard.",
+        "Enhanced data integrity for monitoring systems by authoring custom denoising and logging scripts, ensuring high-quality, actionable insights."
+      ],
+    },
+    {
+      title: "Junior Full Stack Developer (COOP)",
       company: "Nortac Defence",
       location: "Ottawa, Canada",
       period: "August 2023 - April 2024",
@@ -119,9 +131,9 @@ const personalInfo: PersonalInfo = {
       title: "Post-Graduate College Certificate in Cloud Computing",
       school: "Algonquin College",
       location: "Ottawa, Canada",
-      period: "September 2025 - Present",
+      period: "September 2025 - May 2026",
       highlights: [
-      "Gpa of 3.80",
+      "Gpa of 3.70",
       "Strong performance across all courses with consistent A-/A+ grades",
       "Excelling in cloud-focused technical courses)",
       "Currently enrolled (Fall 2025 term in progress)",
@@ -142,6 +154,21 @@ const personalInfo: PersonalInfo = {
     },
   ],
   projects: [
+    {
+      title: "CalTrack",
+      description:
+        "CalTrack is a Flutter app for tracking calories and related health logs.",
+      tags: [
+        "Flutter",
+        "Google's ML Kit Text Recognition",
+        "Googles Material Design 3",
+        "OpenNutrition",
+        "SQLite",
+      ],
+      image: "/images/CalTrack.jpeg", // if no image leave blank
+      link: "", // if no link leave blank
+      github: "https://github.com/OlivTheOlive/CalTrack"
+    },
     {
       title: "Maple Politics",
       description:
