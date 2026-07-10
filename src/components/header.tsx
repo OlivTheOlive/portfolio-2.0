@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import personalInfo from "@/lib/content";
@@ -22,19 +22,19 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Education", href: "#education" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "#about", index: "01" },
+    { name: "Experience", href: "#experience", index: "02" },
+    { name: "Education", href: "#education", index: "03" },
+    { name: "Projects", href: "#projects", index: "04" },
+    { name: "Contact", href: "#contact", index: "05" },
   ];
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          ? "border-border bg-background/90 backdrop-blur-md"
+          : "border-transparent bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -45,12 +45,16 @@ const Header = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="font-bold text-xl"
         >
-          <Link href="/">{personalInfo.name}</Link>
+          <Link
+            href="/"
+            className="font-serif text-xl font-semibold tracking-tight italic"
+          >
+            {personalInfo.name}
+          </Link>
         </motion.div>
 
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center gap-7">
           {navItems.map((item, index) => (
             <motion.div
               key={item.name}
@@ -60,9 +64,15 @@ const Header = () => {
             >
               <Link
                 href={item.href}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="group flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-foreground/70 transition-colors hover:text-primary"
               >
-                {item.name}
+                <span className="text-primary/60 group-hover:text-primary">
+                  {item.index}
+                </span>
+                <span className="relative">
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+                </span>
               </Link>
             </motion.div>
           ))}
@@ -78,14 +88,13 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Button asChild>
+            <Button asChild size="sm">
               <a
                 href="/Olivie_Bergeron_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium"
               >
-                Resume
+                Résumé
               </a>
             </Button>
           </motion.div>
@@ -100,45 +109,47 @@ const Header = () => {
             className="ml-2"
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             )}
           </Button>
         </div>
       </div>
 
-      {mobileMenuOpen && (
-        <motion.div
-          className="md:hidden bg-background/95 backdrop-blur-md"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-        >
-          <nav className="px-4 pb-4 space-y-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block text-foreground/80 hover:text-foreground transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Button asChild className="w-full">
-              <a
-                href="/Olivie_Bergeron_resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium"
-              >
-                Resume
-              </a>
-            </Button>
-          </nav>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="md:hidden border-t border-border bg-background/95 backdrop-blur-md"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <nav className="px-4 py-4 space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-foreground/80 transition-colors hover:text-primary py-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="text-primary/60">{item.index}</span>
+                  {item.name}
+                </Link>
+              ))}
+              <Button asChild className="w-full mt-2">
+                <a
+                  href="/Olivie_Bergeron_resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Résumé
+                </a>
+              </Button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
