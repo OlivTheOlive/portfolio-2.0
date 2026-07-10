@@ -49,7 +49,7 @@ const personalInfo: PersonalInfo = {
   title: "Full Stack Developer",
   email: "oliviebergeron@gmail.com",
   location: "Ottawa, Canada",
-  quote: "I like to fix and build things.",
+  quote: "I like to fix and build things to make things easier",
   avatar: "/images/avatar.jpg",
   about:
     "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
@@ -231,7 +231,7 @@ const personalInfo: PersonalInfo = {
     },
 
     {
-      title: "Zoho Customer Portal Prototype (School Project)",
+      title: "Zoho Customer Portal Prototype (Academic Project)",
       description:
         "As team lead, I developed a Node.js backend application that integrates with ZOHO API to synchronize project data with MongoDB and serve it through API routes to a React.js frontend prototype, providing a more flexible alternative to Zoho Creator for the client.",
       tags: [
@@ -248,7 +248,7 @@ const personalInfo: PersonalInfo = {
       github: "https://github.com/OlivTheOlive/clientZohoNodeApi", // if no github leave blank
     },
     {
-      title: "RoadRunner (School Project)",
+      title: "RoadRunner (Academic Project)",
       description:
         "A mobile application built with React Native and Expo that provides real-time route tracking and navigation using various mapping APIs (Google Directions, Mapbox) with a MongoDB/Express.js backend for data management.",
       tags: [
@@ -271,7 +271,7 @@ const personalInfo: PersonalInfo = {
       github: "https://github.com/OlivTheOlive/RoadRunnerV2", // if no github leave blank
     },
     {
-      title: "Remote Data and RT Application Final Project (School Project)",
+      title: "Remote Data and RT Application Final Project (Academic Project)",
       description:
         "This project is simulates a mainly cloud-native stack that incorporate IoT Hub, Stream Analytics, Blob Storage, CosmoDB and App Services. The goal is to process telemetry data of IoT devices uses to track weather Rideau Canal safety metrics and display them to a web page.",
       tags: [
