@@ -52,7 +52,7 @@ const personalInfo: PersonalInfo = {
   quote: "I like to fix and build things.",
   avatar: "/images/avatar.jpg",
   about:
-    "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and currently pursuing a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
+    "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
   message:
     "Feel free to reach out if you're looking for a developer, have a question, or just want to connect (just dont be weird).",
   socials: {
@@ -64,6 +64,10 @@ const personalInfo: PersonalInfo = {
     "TypeScript",
     "React",
     "Next.js",
+    "Asure",
+    "Cloud",
+    "Azure DevOps",
+    "OpenText",
     "Node.js",
     "Express",
     "MongoDB",
@@ -77,6 +81,7 @@ const personalInfo: PersonalInfo = {
     "Java",
     "RESTful APIs",
     "GraphQL",
+    "PowerShell"
   ],
   experiences: [
     {
