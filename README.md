@@ -1,15 +1,15 @@
 # Portfolio Template
 
-A modern, responsive portfolio template built with Next.js and Tailwind CSS. This template provides a clean and professional way to showcase your work and skills.
+A retro, responsive portfolio template built with Next.js and Tailwind CSS. This template provides a clean and professional way to showcase your work and skills.
 
 ## Features
 
-- 🎨 Modern and minimal design
-- 📱 Fully responsive
-- 🚀 Built with Next.js and Tailwind CSS
-- 🔧 Easy to customize
-- 📝 Simple content management
-- 🌙 Dark/Light mode support
+- Retro and minimal design
+- Fully responsive
+- Built with Next.js and Tailwind CSS
+- Easy to customize
+- Simple content management
+- Dark/Light mode support
 
 ## Getting Started
 
