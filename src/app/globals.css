@@ -125,9 +125,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-background text-foreground;
     position: relative;
+    overflow-x: hidden;
   }
   ::selection {
     background-color: var(--primary);
@@ -147,6 +151,106 @@
   .dark body::before {
     opacity: 0.08;
     mix-blend-mode: overlay;
+  }
+  /* CRT scanline crawl, layered above the grain for an arcade-screen feel */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 61;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0px,
+      rgba(0, 0, 0, 0.7) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    animation: scanline-crawl 0.9s linear infinite;
+  }
+  .dark body::after {
+    opacity: 0.09;
+  }
+}
+
+@keyframes scanline-crawl {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: 9px;
+  }
+}
+
+@keyframes grid-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 44px;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  92%,
+  100% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.84;
+  }
+  94% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.9;
+  }
+  97% {
+    opacity: 1;
+  }
+}
+
+@keyframes crt-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.005) scaleX(1.05);
+    filter: blur(8px);
+  }
+  55% {
+    opacity: 1;
+    transform: scaleY(1.02) scaleX(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary) 55%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 14px 3px
+      color-mix(in oklch, var(--primary) 55%, transparent);
   }
 }
 
@@ -188,5 +292,29 @@
     font-family: var(--font-mono);
     font-size: 0.7rem;
     letter-spacing: 0.15em;
+  }
+
+  /* animated receding grid, like an arcade horizon */
+  .bg-retro-grid {
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 44px 44px;
+    animation: grid-scroll 3.5s linear infinite;
+  }
+
+  .twinkle-dot {
+    animation: twinkle 2.6s ease-in-out infinite;
+  }
+
+  .animate-flicker {
+    animation: flicker 7s ease-in-out infinite;
+  }
+
+  .animate-crt-in {
+    animation: crt-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2.4s ease-in-out infinite;
   }
 }

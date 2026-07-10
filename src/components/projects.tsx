@@ -30,7 +30,7 @@ const Projects = () => {
   const otherProjects = personalInfo.projects.slice(1);
 
   return (
-    <section className="relative py-4">
+    <section className="relative overflow-hidden py-4">
       <div className="bg-halftone pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full" />
       <div className="bg-halftone pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full" />
 
