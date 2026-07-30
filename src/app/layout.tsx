@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, Space_Mono } from "next/font/google";
+import { JetBrains_Mono, Fraunces, VT323 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-inter",
+  weight: ["400", "500", "700"],
 });
 
 const fraunces = Fraunces({
@@ -15,10 +16,10 @@ const fraunces = Fraunces({
   style: ["normal", "italic"],
 });
 
-const spaceMono = Space_Mono({
+const vt323 = VT323({
   subsets: ["latin"],
   variable: "--font-space-mono",
-  weight: ["400", "700"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${fraunces.variable} ${spaceMono.variable} font-sans antialiased`}
+        className={`${jetbrainsMono.variable} ${fraunces.variable} ${vt323.variable} font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -42,6 +43,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="crt-flicker" aria-hidden />
+          <div className="crt-vignette" aria-hidden />
           {children}
         </ThemeProvider>
       </body>

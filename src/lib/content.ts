@@ -46,10 +46,10 @@ export type PersonalInfo = {
 
 const personalInfo: PersonalInfo = {
   name: "Olivie Bergeron",
-  title: "Full Stack Developer",
+  title: "Developer",
   email: "oliviebergeron@gmail.com",
   location: "Ottawa, Canada",
-  quote: "I like to fix and build things to make things easier",
+  quote: "I like to make things easier",
   avatar: "/images/avatar.jpg",
   about:
     "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
@@ -109,54 +109,66 @@ const personalInfo: PersonalInfo = {
         "Integrated new device registration features using React.js, Node.js, and MySQL, demonstrating rapid response to customer requirements",
       ],
     },
+    {
+      title: "Technical Support Staff",
+      company: "AWO/CAS",
+      location: "Ottawa, Canada",
+      period: "August 2021 - August 2022",
+      description: [
+        "Provided technical and facility support services for on-site and remote personnel, ensuring safe, efficient, and uninterrupted building operations",
+        "Performed routine inspections and maintenance of building systems, identifying and resolving operational issues in a timely manner",
+        "Responded to service requests and assigned work orders, prioritizing tasks based on operational impact and urgency",
+        "Assisted with troubleshooting hardware, equipment, and infrastructure-related issues for staff and building occupants",
+        "Supported preventive maintenance activities on mechanical, electrical, and building systems to minimize downtime and extend equipment life",
+        "Maintained accurate records of service requests, maintenance activities, inspections, and completed work orders",
+        "Assisted with office moves, furniture installation, equipment setup, and other labor-intensive operational tasks",
+        "Assisted in maintaining compliance with occupational health and safety requirements through regular inspections and reporting",
+      ],
+    },
   ],
   education: [
     {
-      title: "College Diploma in Computer Programming",
+      title: "Computer Programming Diploma",
       school: "Algonquin College",
       location: "Ottawa, Canada",
       period: "September 2022 - August 2024",
       highlights: [
-        "Graduated with a GPA of 3.64",
+        "Graduated with honors, achieving a GPA of 3.64/4.0",
         "Completed a capstone project using Zoho API, React.js, Node.js, and MongoDB",
         "Strong performance in core programming courses (A/A- grades in Java OOP, Web Programming, Network Programming)",
         "Excelled in database and design courses (A+/A grades)",
-        "Completed two cooperative work terms (Fall 2023, Winter 2024)",
-        "Consistently earned A-range grades across most technical courses",
-      ],
-      coursework: ["Programming fundamentals and OOP with design patterns",
-        "Database systems and advanced database topics",
-        "Web and mobile application development",
-        "Operating systems and network programming",
-        "Business and enterprise application programming",
-        "Technical communication and professional development",
-      ],
-    },
-    {
-      title: "Post-Graduate College Certificate in Cloud Computing",
-      school: "Algonquin College",
-      location: "Ottawa, Canada",
-      period: "September 2025 - May 2026",
-      highlights: [
-      "Gpa of 3.70",
-      "Strong performance across all courses with consistent A-/A+ grades",
-      "Excelling in cloud-focused technical courses)",
-      "Currently enrolled (Fall 2025 term in progress)",
+        "Completed two software development cooperative work terms (Fall 2023, Winter 2024)",
+        "Consistently earned A-range grades across most technical courses"
       ],
       coursework: [
-        "Cloud computing fundamentals and architecture",
-        "Cloud platform implementation and management",
-        "Cloud security and compliance",
-        "Cloud networking and virtualization",
-        "Cloud storage and data management",
-        "Cloud application development",
-        "Remote and Real-time data applications",
-        "Professional development and career readiness",
-        "Web Content Accessibility Guidelines (WCAG) 2.2",
-        "Accessibility Testing and Evaluation",
-      
-      ],
+        "Object-oriented programming (Java) and OOP design patterns",
+        "Database systems (MySQL, OracleDB) and database topics",
+        "Web, mobile, and enterprise application development",
+        "Operating systems, scripting, and network programming",
+        "Data analytics and software engineering practices",
+        "Technical communication and professional development"
+      ]
     },
+    {
+      title: "Post-Graduate Diploma in Cloud Computing",
+      school: "Algonquin College",
+      location: "Ottawa, Canada",
+      period: "September 2025 - August 2026",
+      highlights: [
+        "Graduated with honors, achieving a GPA of 3.7/4.0",
+        "Strong performance across all courses with consistent A-/A+ grades",
+        "Excelled in cloud-focused technical and migration courses",
+        "Gained hands-on experience in real-time IoT architecture and system containerization"
+      ],
+      coursework: [
+        "Cloud migration, integration, and containerization (Docker, Azure, AWS)",
+        "Cloud platform implementation, virtual networking, and architecture",
+        "Cloud security, compliance, storage, and data management",
+        "Remote and Real-time data applications (Node.js, Express, Cosmos DB, IoT Hub)",
+        "Web Content Accessibility Guidelines (WCAG) 2.2 and accessibility testing",
+        "Professional development and career readiness"
+      ]
+    }
   ],
   projects: [
     {

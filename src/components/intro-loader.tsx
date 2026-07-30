@@ -104,11 +104,11 @@ const IntroLoader = () => {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
 
           <div className="relative flex w-full max-w-xs flex-col items-center gap-4 px-6 text-center sm:max-w-sm sm:gap-5">
-            <span className="eyebrow animate-flicker text-[10px] sm:text-xs">
+            <span className="eyebrow animate-flicker crt-glow text-[11px] sm:text-xs">
               System Boot
             </span>
 
-            <p className="min-h-[2.25rem] break-words font-mono text-[11px] leading-snug tracking-[0.1em] text-foreground/80 sm:min-h-[1.5rem] sm:text-sm sm:tracking-[0.15em]">
+            <p className="crt-glow min-h-[2.25rem] break-words font-mono text-[13px] leading-snug tracking-[0.1em] text-foreground/80 sm:min-h-[1.5rem] sm:text-base sm:tracking-[0.15em]">
               {BOOT_LINES[lineIndex]}
               <motion.span
                 className="ml-1 inline-block"
@@ -127,7 +127,7 @@ const IntroLoader = () => {
               />
             </div>
 
-            <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground sm:text-[11px]">
+            <span className="font-mono crt-glow text-[11px] tracking-[0.2em] text-muted-foreground sm:text-[12px]">
               {String(progress).padStart(3, "0")}%
             </span>
           </div>

@@ -40,7 +40,7 @@ const About = () => {
         variants={fadeIn}
       >
         <span className="plate-index text-primary/60">01</span>
-        <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="font-serif text-3xl font-semibold tracking-tight crt-glow-soft sm:text-4xl">
           About Me
         </h2>
         <span className="rule-fade h-px flex-1" />

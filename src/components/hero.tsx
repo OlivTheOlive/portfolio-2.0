@@ -79,13 +79,14 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.p variants={item} className="eyebrow mb-6">
+        <motion.p variants={item} className="eyebrow prompt crt-glow mb-6">
           Portfolio &middot; Est. {new Date().getFullYear()}
+          <span className="cursor-blink ml-1">&nbsp;</span>
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="font-serif text-5xl font-semibold tracking-tight text-foreground sm:text-6xl md:text-7xl"
+          className="font-serif text-5xl font-semibold tracking-tight text-foreground crt-glow-soft sm:text-6xl md:text-7xl"
         >
           {personalInfo.name}
         </motion.h1>
@@ -95,7 +96,7 @@ const Hero = () => {
           className="mx-auto mt-5 flex items-center justify-center gap-4"
         >
           <span className="rule-fade h-px w-12" />
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary crt-glow sm:text-sm">
             {personalInfo.title}
           </p>
           <span className="rule-fade h-px w-12" />

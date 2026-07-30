@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import personalInfo from "@/lib/content";
 import { GraduationCap, CalendarIcon, MapPinIcon } from "lucide-react";
 
@@ -20,13 +19,13 @@ const Education = () => {
     <div className="mx-auto max-w-4xl">
       <div className="mb-10 flex items-baseline gap-4">
         <span className="plate-index text-primary/60">03</span>
-        <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="font-serif text-3xl font-semibold tracking-tight crt-glow-soft sm:text-4xl">
           Education
         </h2>
         <span className="rule-fade h-px flex-1" />
       </div>
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-10 space-y-10">
         {personalInfo.education.map((edu, index) => (
           <motion.div
             key={`${edu.school}-${index}`}
@@ -36,51 +35,63 @@ const Education = () => {
             variants={fadeIn}
             transition={{ delay: index * 0.1 }}
           >
-            <Card className="overflow-hidden border-l-[3px] border-l-primary transition-colors hover:border-primary/60">
-              <CardHeader className="pb-2">
-                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <span className="plate-index text-muted-foreground">
-                      No. {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="mt-1 font-serif text-xl font-semibold tracking-tight">
-                      {edu.title}
-                    </h3>
-                    <div className="mt-1.5 flex items-center text-muted-foreground">
-                      <GraduationCap className="mr-1.5 h-4 w-4" />
-                      <span className="mr-3 text-sm">{edu.school}</span>
-                      <MapPinIcon className="mr-1.5 h-4 w-4" />
-                      <span className="text-sm">{edu.location}</span>
-                    </div>
-                  </div>
-                  <Badge
-                    variant="secondary"
-                    className="mt-2 flex items-center justify-center md:mt-0"
-                  >
-                    <CalendarIcon className="mr-1.5 h-3 w-3" />
-                    {edu.period}
-                  </Badge>
+            <Card className="plate-marks relative overflow-hidden border-[1.5px] border-border/80 bg-card/60 p-0 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-card">
+              <span className="mk-tl" />
+
+              <div className="absolute right-0 top-0 flex items-center gap-1.5 border-b border-l border-border/80 bg-secondary/40 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground/70">
+                <CalendarIcon className="h-3 w-3" />
+                {edu.period.trim()}
+              </div>
+
+              <span className="plate-watermark absolute -right-2 bottom-2 select-none">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <CardContent className="relative px-8 pb-8 pt-10">
+                <span className="plate-index prompt text-primary">
+                  Plate № {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-2 font-serif text-2xl font-semibold tracking-tight">
+                  {edu.title}
+                </h3>
+
+                <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-muted-foreground">
+                  <span className="inline-flex items-center">
+                    <GraduationCap className="mr-1.5 h-4 w-4 text-primary/70" />
+                    {edu.school}
+                  </span>
+                  <span className="inline-flex items-center">
+                    <MapPinIcon className="mr-1.5 h-4 w-4 text-primary/70" />
+                    {edu.location}
+                  </span>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <h4 className="eyebrow">Highlights</h4>
-                <ul className="mt-4 space-y-2.5 text-sm text-foreground/80 md:text-base">
-                  {edu.highlights.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="mr-3 mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary/70"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <h4 className="eyebrow mt-6">Coursework</h4>
-                <ul className="mt-4 space-y-2.5 text-sm text-foreground/80 md:text-base">
-                  {edu.coursework.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="mr-3 mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary/70"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                <div className="rule-fade my-6 h-px w-full" />
+
+                <div className="grid grid-cols-1 gap-x-10 gap-y-6 md:grid-cols-2">
+                  <div>
+                    <h4 className="eyebrow">Highlights</h4>
+                    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/80 md:text-[15px]">
+                      {edu.highlights.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rotate-45 bg-primary/70" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="eyebrow">Coursework</h4>
+                    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/80 md:text-[15px]">
+                      {edu.coursework.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rotate-45 bg-primary/70" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </motion.div>

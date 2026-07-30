@@ -39,11 +39,10 @@ const Footer = () => {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <span className="plate-index text-primary/60">05</span>
-          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+          <span className="plate-index prompt text-primary/60">05</span>
+          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight crt-glow-soft sm:text-4xl">
             Get In Touch
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-foreground/70">
+          </h2>          <p className="mx-auto mt-4 max-w-2xl text-foreground/70">
             {personalInfo.message}
           </p>
           <Button asChild size="lg" className="mt-8 px-8">
@@ -96,7 +95,7 @@ const Footer = () => {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          &copy; {currentYear} {personalInfo.name} &middot; All Rights Reserved
+          &copy; {currentYear} {personalInfo.name} &middot; All Rights Reserved<span className="cursor-blink ml-1">_</span>
         </motion.p>
       </div>
     </footer>
