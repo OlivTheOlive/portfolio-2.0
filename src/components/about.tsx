@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import personalInfo from "@/lib/content";
 import {
   Github,
@@ -148,6 +148,11 @@ const About = () => {
                 <p className="relative font-serif text-lg italic leading-relaxed text-foreground/85">
                   &ldquo;{personalInfo.quote}&rdquo;
                 </p>
+                <CardFooter className="justify-end px-0 pt-4">
+                  <cite className="font-mono text-sm not-italic text-muted-foreground">
+                    &mdash; {personalInfo.source}
+                  </cite>
+                </CardFooter>
               </CardContent>
             </Card>
           </motion.div>

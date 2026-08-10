@@ -31,6 +31,7 @@ export type PersonalInfo = {
   about: string;
   avatar: string;
   quote: string;
+  source: string;
   message: string;
   socials: {
     github?: string;
@@ -50,6 +51,7 @@ const personalInfo: PersonalInfo = {
   email: "oliviebergeron@gmail.com",
   location: "Ottawa, Canada",
   quote: "I like to make things easier",
+  source: "Me",
   avatar: "/images/avatar.jpg",
   about:
     "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
@@ -85,7 +87,7 @@ const personalInfo: PersonalInfo = {
   ],
   experiences: [
     {
-      title: "TeamSite AI Cloud Developer (COOP)",
+      title: "TeamSite AI Cloud Developer",
       company: "DND",
       location: "Ottawa, Canada",
       period: " May 2026 - Present",
@@ -97,7 +99,7 @@ const personalInfo: PersonalInfo = {
       ],
     },
     {
-      title: "Junior Full Stack Developer (COOP)",
+      title: "Junior Full Stack Developer",
       company: "Nortac Defence",
       location: "Ottawa, Canada",
       period: "August 2023 - April 2024",
