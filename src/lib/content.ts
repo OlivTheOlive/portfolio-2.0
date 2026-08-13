@@ -50,11 +50,11 @@ const personalInfo: PersonalInfo = {
   title: "Developer",
   email: "oliviebergeron@gmail.com",
   location: "Ottawa, Canada",
-  quote: "I like to make things easier",
+  quote: "I enjoy crafting intuitive experiences that make users' lives easier.",
   source: "Me",
   avatar: "/images/avatar.jpg",
   about:
-    "Hi, I'm Olivié Bergeron, aspiring developer. I have a College Diploma in Computer Programming and a Post-Graduate College Diploma in Cloud Computing from Algonquin College. I interned as a full-stack developer at Nortac Defence, working on web and mobile applications. I love learning new technologies and am always eager to collaborate on interesting projects. Outside of coding, I enjoy making specialty candles using 3D design, creating music, and playing/making gaming.",
+    "Hi, I'm Olivié Bergeron, a full-stack developer with a unique background, nearly 10 years in construction combined with formal training in Computer Programming and Cloud Computing. This gives me a practical, hands-on approach to problem-solving. I've interned at Nortac Defence (web and mobile applications) and DND (cloud infrastructure and Teamsite CMS). I'm passionate about learning new technologies and collaborating on meaningful projects. Outside of coding, I enjoy designing specialty candles using 3D design, creating music, and playing and making games.",
   message:
     "Feel free to reach out if you're looking for a developer, have a question, or just want to connect (just dont be weird).",
   socials: {
