@@ -92,10 +92,11 @@ const personalInfo: PersonalInfo = {
       location: "Ottawa, Canada",
       period: " May 2026 - Present",
       description: [
-        "Leveraged Azure Monitor Agent (AMA) and Data Collection Rules (DCRs) to build a scalable and efficient pipeline for aggregating application logs across multiple VMs.",
+        "Leveraged Azure Monitor Agent (AMA) and Data Collection Rules (DCRs) to build a scalable and efficient pipe line for aggregating application logs across multiple Windows Server VMs",
         "Automated proactive system health checks by developing a PowerShell script to monitor and log the status of critical services and web applications.",
         "Improved system observability and incident response time by creating a centralized logging solution that streams application data to an Azure Monitoring Workbook dashboard.",
-        "Enhanced data integrity for monitoring systems by authoring custom denoising and logging scripts, ensuring high-quality, actionable insights."
+        "Enhanced data integrity for monitoring systems by authoring custom denoising and logging scripts, ensuring high quality, actionable insights.",
+        "Designed and implemented an Azure DevOps CI/CD pipeline to automate the deployment and provisioning of the monitoring platform, integrating Azure Monitor Agent (AMA), Data Collection Rules (DCRs), Workbooks, and supporting PowerShell monitoring components to ensure consistent, scalable, and repeatable deployments across environments."
       ],
     },
     {
