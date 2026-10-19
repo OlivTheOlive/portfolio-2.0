@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import About from "@/components/about";
-import Experience from "@/components/experience";
+import ExperienceTimeline from "@/components/experience-timeline";
 import Education from "@/components/education";
 import Projects from "@/components/projects";
 import Footer from "@/components/footer";
@@ -26,7 +26,7 @@ export default function Home() {
           </div>
 
           <section id="experience" className="py-16">
-            <Experience />
+            <ExperienceTimeline />
           </section>
 
           <div className="mx-auto max-w-5xl">
