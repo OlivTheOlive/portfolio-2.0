@@ -3,6 +3,7 @@ export type Experience = {
   company: string;
   location: string;
   period: string;
+  current?: boolean; // true = still in this role (drives the "Current" badge)
   description: string[];
 };
 
@@ -90,7 +91,7 @@ const personalInfo: PersonalInfo = {
       title: "TeamSite AI Cloud Developer",
       company: "DND",
       location: "Ottawa, Canada",
-      period: " May 2026 - Present",
+      period: " May 2026 - Sept 2026",
       description: [
         "Leveraged Azure Monitor Agent (AMA) and Data Collection Rules (DCRs) to build a scalable and efficient pipe line for aggregating application logs across multiple Windows Server VMs",
         "Automated proactive system health checks by developing a PowerShell script to monitor and log the status of critical services and web applications.",
